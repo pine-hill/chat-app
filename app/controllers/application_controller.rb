@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   #サインアップの画面に遷移
-  before_action :authenticate_user!
+  before_action :authenticate_user! #ログイン済みのユーザにのみアクセスを許可
   #ユーザーの名前をDBに保存
   before_action :configure_permitted_parameters, if: :devise_controller?
 
